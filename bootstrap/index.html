@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Bootstrap 模板</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+   </head>
+   <body background="image/background.jpg">
+   <div style="margin-top: 5%;">
+	<div class="row-fluid">
+		<div class="span12">
+			<form class="form-horizontal" action="" method="get">
+				<div class="control-group" style="margin-left:45%">
+					 <label class="control-label" for="inputName" >姓名：</label>
+					<div class="controls" style="margin-top: 5px">
+						<input id="inputName" type="text" name="name" />
+					</div>
+				</div>
+				<div class="control-group" style="margin-left: 45%">
+					 <label class="control-label" for="inputNumber" style="margin-top: 10px">手机号：</label>
+					<div class="controls" style="margin-top: 5px">
+						<input id="inputNumber" type="text" name="tele_number" />
+					</div>
+				</div>
+				<div class="control-group" style="margin-left: 45%">
+					 <label class="control-label" for="inputAddress" style="margin-top: 10px">联系地址：</label>
+					<div class="controls" style="margin-top: 5px">
+						<input id="inputAddress" type="text" name="address"/>
+					</div>
+				</div>
+				<div>
+					<div class="control-group" style="margin-left: 45%">
+					 <label class="control-label" for="inputAddress" style="margin-top: 10px">尺寸：</label>
+						<select  name="size">
+							<option value="150" >150</option>
+							<option value="155" >155</option>
+							<option value="160" >160</option>
+							<option value="165" >165</option>
+						</select>
+					</div>
+				</div>
+				<div class="control-group" style="margin-left: 45%">
+					 <label class="control-label"  style="margin-top: 10px">样式：</label>
+					<select name="style">
+						<option value="1" >样式一</option>
+						<option value="2" >样式二</option>
+					</select>
+				</div>
+				<div class="container-fluid" style="margin-left: 38%">
+					<div class="row-fluid">
+						<div class="span12">
+							<img src="image/style_1_f.jpg" class="img-rounded" width="200" height="200" style="margin-top: 10px;margin-right: 20px" />
+							<img src="image/style_1_b.jpg" class="img-rounded"  width="200" height="200" style="margin-top: 10px"/><br/>
+						</div>
+					</div>
+					<div style="margin-top: 10px;margin-left: 187px">
+						<label >样式一</label>
+					</div>
+					<div class="row-fluid">
+						<div class="span12">
+							<img src="image/style_2_f.jpg" class="img-rounded" width="200" height="200" style="margin-top: 10px;margin-right: 20px" />
+							<img src="image/style_2_b.jpg" class="img-rounded"  width="200" height="200" style="margin-top: 10px"/><br/>
+						</div>
+					</div>
+					<div style="margin-top: 10px;margin-left: 187px">
+						<label >样式二</label>
+					</div>
+				</div>
+				<div style="margin-top: 15px;margin-left: 45%" >
+					<button class="btn btn-success" type="submit">提交</button>
+					<button class="btn btn-danger" type="reset" style="margin-left: 60px;">重置</button>
+				</div>
+			</form>
+		</div>
+	</div>
+   </div>
+      <!-- 包括所有已编译的插件 -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
