@@ -30,4 +30,14 @@ div.style{
 div.conform{
     padding-top: 20px;
 }
-
+.mainBox{
+    height: 300px;
+    width: 900px;
+    background-color: #cc99ff;
+}
+.leftBox{
+    height: 740px;
+    height: 200px;
+    background-color: #cc99ff;
+    float: right;
+}
