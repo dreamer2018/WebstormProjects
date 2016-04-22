@@ -9,7 +9,7 @@
 <div style="margin-top: 2px;">
     <div class="row-fluid">
         <div class="span12">
-            <form class="form-horizontal" action="add.php" method="get">
+            <form class="form-horizontal" action="add.php" method="post">
                 <div class="control-group" style="margin-left:45%">
                     <label class="control-label" for="inputName">姓名：</label>
                     <div class="controls" style="margin-top: 5px">
@@ -19,7 +19,7 @@
                 <div class="control-group" style="margin-left: 45%">
                     <label class="control-label" for="inputNumber" style="margin-top: 10px">手机号：</label>
                     <div class="controls" style="margin-top: 5px">
-                        <input id="inputNumber" type="text" name="tele_number"/>
+                        <input id="inputPhone" type="text" name="phone"/>
                     </div>
                 </div>
                 <div class="control-group" style="margin-left: 45%">
@@ -29,31 +29,34 @@
                     </div>
                 </div>
                 <div class="control-group" style="margin-left: 45%">
-                    <label class="control-label" style="margin-top: 10px">性&nbsp;&nbsp;别：</label>
+                    <label class="control-label" style="margin-top: 10px">款&nbsp;&nbsp;式：</label>
                     <select name="style">
-                        <option value="1">男</option>
-                        <option value="2">女</option>
+                        <option value="1">男款</option>
+                        <option value="2">女款</option>
                     </select>
                 </div>
                 <div>
                     <div class="control-group" style="margin-left: 45%">
                         <label class="control-label" for="inputAddress" style="margin-top: 10px">尺&nbsp;&nbsp;寸：</label>
                         <select name="size">
-                            <option value="150">150</option>
-                            <option value="155">155</option>
-                            <option value="160">160</option>
-                            <option value="165">165</option>
+                            <option value="1">M</option>
+                            <option value="2">L</option>
+                            <option value="3">XL</option>
+                            <option value="4">XXL</option>
                         </select>
                     </div>
                 </div>
                 <div class="control-group" style="margin-left: 45%">
                     <label class="control-label" style="margin-top: 10px">样&nbsp;&nbsp;式：</label>
-                    <select name="style">
-                        <option value="1">样式一</option>
-                        <option value="2">样式二</option>
+                    <select name="design">
+                        <option value="1">样式一(白)</option>
+                        <option value="2">样式二(黑)</option>
                     </select>
                 </div>
-
+                <div class="control-group" style="margin-left:45%">
+                    <label class="control-label" style="margin-top: 10px">数&nbsp;&nbsp;量：</label>
+                    <input id="inputNumber" type="text" name="number" size="5"/>
+                </div>
                 <div class="container-fluid" style="margin-left: 37%">
                     <div class="row-fluid">
                         <div class="span12">
