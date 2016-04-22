@@ -148,7 +148,6 @@ $result_phone = $connect->query($select_phone);
 
 
 $r1 = $result_name->fetch_array();
-
 $r2 = $result_phone->fetch_array();
 
 if ($r1[0] != '0' or $r2[0] != '0') {
