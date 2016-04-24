@@ -63,6 +63,9 @@ echo "    <li>尺寸：" . $size . "</li>";
 echo "    <li>样式：" . $design_name . "</li>";
 echo "    <li>数量：" . $number . "</li>";
 echo "</ul> ";
+
+
+
 $name= htmlentities($name,ENT_QUOTES,'UTF-8');
 $phone= htmlentities($phone,ENT_QUOTES,'UTF-8');
 $address= htmlentities($address,ENT_QUOTES,'UTF-8');
@@ -73,33 +76,72 @@ $number= htmlentities($number,ENT_QUOTES,'UTF-8');
 
 
 /**
- *简单字符判断
+ * 简单字符判断
+ * 正则判断
  **/
+
+
 //判断姓名是否为空或者过长
+
 if(strlen($name) > 20 || strlen($name) < 1){
-    die("<p>1您输入的姓名太长或太短，请修改后重试！</p>");
+    die("<p>您输入的姓名太长或为空，请修改后重试！</p>");
 }
-//判断手机号是否
+//判断姓名是否全为汉字
+if(!preg_match('/^[\x{4e00}-\x{9fa5}]+$/u',$name)){
+    die("<p>姓名全部必须是汉字!</p>");
+}
+
+/*
+//判断手机号是否是11位
 if(strlen($phone) != 11 ){
     die("<p>1您输入的手机号不正确，请修改后重试!</p>");
+}*/
+
+//判断手机号是否为全部数字，且为11位
+if(!preg_match("/(13\d|14[57]|15[^4,\D]|17[678]|18\d)\d{8}|170[059]\d{7}/",$phone)){
+
+    die("<p>2您输入的手机号不正确，请修改后重试!</p>");
 }
+
 //判断地址是否过长或为空
 if(strlen($address) < 1 || strlen($address) > 100){
     die("<p>1您输入的地址太长或太短，请修改后重试！</p>");
 }
+
+
 //判断款式
 echo $style;
 if($style != 1 && $style != 2){
     die("<p>1您选择的款式不存在，请修改后重试！</p>");
 }
+//判断款式
+if(!preg_match("/[1-9]{1}/",$style)){
+    die("<p>2您选择的款式不存在，请修改后重试！</p>");
+}
+
+
 //判断尺寸
 if($size < 1 || $size > 4){
     die("<p>1您选择的尺寸不存在，请修改后重试！</p>");
 }
+//判断尺寸
+if(!preg_match("/[1-9]{1}/",$size)){
+    die("<p>2您选择的尺寸不存在，请修改后重试！</p>");
+}
+
+
+
 //判断样式
 if($design != 1 && $design != 2){
     die("<p>1你选择的样式不存在，请修改后重试！</p>");
 }
+//判断样式
+if(!preg_match("/[1-9]{1}/",$design)){
+    die("<p>2你选择的样式不存在，请修改后重试！</p>");
+}
+
+
+
 //判断数量
 if(strlen($number) < 1 ){
     die("<p>1数量不能为空！</p>");
@@ -107,35 +149,11 @@ if(strlen($number) < 1 ){
 if($number < 1){
     die("<p>1数量至少为1！</p>");
 }
-/**
-  *正则判断
- **/
-//判断姓名
-if(!preg_match('/^[\x{4e00}-\x{9fa5}]+$/u',$name)){
-    die("<p>姓名全部必须是汉字!</p>");
-}
-
-//判断手机号是否为全部数字
-if(!preg_match("/(13\d|14[57]|15[^4,\D]|17[678]|18\d)\d{8}|170[059]\d{7}/",$phone)){
-
-    die("<p>2您输入的手机号不正确，请修改后重试!</p>");
-}
-//判断款式
-if(!preg_match("/[1-9]{1}/",$style)){
-    die("<p>2您选择的款式不存在，请修改后重试！</p>");
-}
-//判断样式
-if(!preg_match("/[1-9]{1}/",$design)){
-    die("<p>2你选择的样式不存在，请修改后重试！</p>");
-}
-//判断尺寸
-if(!preg_match("/[1-9]{1}/",$size)){
-    die("<p>2您选择的尺寸不存在，请修改后重试！</p>");
-}
 //判断数量
 if(!preg_match('/[1-9]\d*/', $number)){
     die("<p>您输入的数量不合法，请修改后重试！</p>");
 }
+
 
 //查找姓名
 $select_name = "select count(name) from ".$DB_TABLE_NAME." where name=\"".$name."\";";
