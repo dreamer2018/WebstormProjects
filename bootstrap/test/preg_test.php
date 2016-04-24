@@ -19,4 +19,6 @@ if(preg_match('/^[\x{4e00}-\x{9fa5}]+$/u',$name)){
     echo "NOT";
 }
 
+$passwd="rgewghetg";
+echo mb_strlen($passwd);
 ?>
