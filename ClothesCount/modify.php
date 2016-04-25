@@ -43,7 +43,8 @@
      * Function:收集衣服数据的后台逻辑页面
      */
 
-
+    //订购ID
+    $id = $_POST["id"];
     //姓名
     $name = $_POST["name"];
     //电话号码
@@ -83,6 +84,7 @@
             $size_name = "";
     }
     echo "<ul>";
+    echo "    <li>订购ID:&nbsp;&nbsp;".$id."</li>";
     echo "    <li>姓&nbsp;名：&nbsp;&nbsp;" . $name . "</li>";
     echo "    <li>手机号：&nbsp;&nbsp;" . $phone . "</li>";
     echo "    <li>地&nbsp;址：&nbsp;&nbsp;" . $address . "</li>";
@@ -92,7 +94,7 @@
     echo "    <li>样式二(黑)数量：&nbsp;&nbsp;" . $design_2 . "</li>";
     echo "</ul> ";
 
-
+    $id = htmlentities($id,ENT_QUOTES,'UTF-8');
     $name = htmlentities($name, ENT_QUOTES, 'UTF-8');
     $phone = htmlentities($phone, ENT_QUOTES, 'UTF-8');
     $address = htmlentities($address, ENT_QUOTES, 'UTF-8');
@@ -191,27 +193,32 @@
         die("Select Databases Error");
     }
 
+    //查找id
+    $select_id = "select count(*) from " . $DB_TABLE_NAME . " where id=" . $id. ";";
     //查找姓名
-    $select_name = "select count(name) from " . $DB_TABLE_NAME . " where name=\"" . $name . "\";";
+    $select_name = "select count(name),id from " . $DB_TABLE_NAME . " where name=\"" . $name . "\";";
     //查找电话号码
-    $select_phone = "select count(phone) from " . $DB_TABLE_NAME . " where phone=" . $phone . ";";
+    $select_phone = "select count(phone),id from " . $DB_TABLE_NAME . " where phone=" . $phone . ";";
 
     //获取结果
-    $result_name = $connect->query($select_name);
+    $result_id = $connect->query($select_id);
     $result_phone = $connect->query($select_phone);
+    $result_name = $connect->query($select_name);
 
 
     $r1 = $result_name->fetch_array();
     $r2 = $result_phone->fetch_array();
+    $r_id = $result_id->fetch_array();
 
-    if ($r1[0]== '0' and $r2[0] == '0') {
-        die("<p>您的信息不存在,不需要重置,请点击<a href='lookup.php'>已订查询</a>查看,或点击<a href='index.html'><>首页></p>");
+    if ($r_id[0] < 1) {
+        die("<p>您的订购ID不存在,请点击<a href='lookup.php'>已订查询</a>确认,或点击<a href='index.html'>首页</a>添加</p>");
+    }elseif (($r1[0] > 0 and $r1[1]!=$id) or ($r2[0] > 0 and $r2[1]!=$id)){
+            die("<p>您的姓名或电话号码被占用,点击<a href='lookup.php'>已订查询</a>查看</p>");
     } else {
-
-        $query = "update ".$DB_TABLE_NAME." set name=\"".$name."\",phone=".$phone.",address=\"".$address."\",style=".$style.",size=".$size.",design_1=".$design_1.",design_2=".$design_2."  where name=\"".$name."\";";
+        $query = "update ".$DB_TABLE_NAME." set name=\"".$name."\",phone=".$phone.",address=\"".$address."\",style=".$style.",size=".$size.",design_1=".$design_1.",design_2=".$design_2."  where id=".$id.";";
         $result = $connect->query($query);
         if (!$result) {
-            echo "<p>插入数据失败，请重试或联系小组负责人！</p>";
+            echo "<p>插入数据失败，请重试！</p>";
         } else {
             echo "<p>信息重置成功，请点击<a href='lookup.php'>已订查询</a>查看</p>";
         }
