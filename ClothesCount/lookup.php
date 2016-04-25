@@ -5,7 +5,8 @@
     <title>XiyouLinuxGroup</title>
     <style>
         body{
-            background-image: url("image/backgroud.jpg");
+            background-image: url("image/backgroud5.jpg");
+            margin-top: 7%;
         }
         .table table{
             background-color: #2aabd2;
