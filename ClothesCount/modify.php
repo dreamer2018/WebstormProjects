@@ -5,7 +5,7 @@
     <title>信息重置</title>
     <style>
         body {
-            background-image: url("image/backgroud.jpg");
+            background-image: url("image/backgroud4.jpg");
         }
 
         .top {
