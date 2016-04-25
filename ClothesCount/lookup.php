@@ -86,6 +86,7 @@
         echo "<td align='center' >" . $row["design_2"] . "</td>";
         echo "</tr>";
     }
+    echo "<p>如发现信息错误，请点击<a href='reset.html'>重置</a>修改信息</p>";
     echo "</div>"
     ?>
 </div>
