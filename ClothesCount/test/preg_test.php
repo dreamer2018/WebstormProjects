@@ -20,5 +20,8 @@ if(preg_match('/^[\x{4e00}-\x{9fa5}]+$/u',$name)){
 }
 
 $passwd="rgewghetg";
-echo mb_strlen($passwd);
-?>
+echo strlen($passwd);
+$address="     wff e d f";
+$address_str =preg_replace("/\s/","",$address);
+echo "<br/>len=".strlen($address_str)."<br/>";
+echo "address_str=".$address_str.";";

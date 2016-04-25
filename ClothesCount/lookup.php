@@ -54,7 +54,7 @@
 
         if ($row["style"] == 1) {
             $style_name = "男款";
-        } elseif ($style == 2) {
+        } elseif ($row["style"] == 2) {
             $style_name = "女款";
         } else {
             $style_name = " ";

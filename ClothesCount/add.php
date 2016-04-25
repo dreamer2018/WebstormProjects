@@ -83,11 +83,11 @@
             $size_name = "";
     }
     echo "<ul>";
-    echo "    <li>姓&nbsp;&nbsp;&nbsp;&nbsp;名：&nbsp;&nbsp;" . $name . "</li>";
+    echo "    <li>姓&nbsp;名：&nbsp;&nbsp;" . $name . "</li>";
     echo "    <li>手机号：&nbsp;&nbsp;" . $phone . "</li>";
-    echo "    <li>地&nbsp;&nbsp;&nbsp;&nbsp;址：&nbsp;&nbsp;" . $address . "</li>";
-    echo "    <li>款&nbsp;&nbsp;&nbsp;&nbsp;式：&nbsp;&nbsp;" . $style_name . "</li>";
-    echo "    <li>尺&nbsp;&nbsp;&nbsp;&nbsp;寸：&nbsp;&nbsp;" . $size_name . "</li>";
+    echo "    <li>地&nbsp;址：&nbsp;&nbsp;" . $address . "</li>";
+    echo "    <li>款&nbsp;式：&nbsp;&nbsp;" . $style_name . "</li>";
+    echo "    <li>尺&nbsp;寸：&nbsp;&nbsp;" . $size_name . "</li>";
     echo "    <li>样式一(白)数量：&nbsp;&nbsp;" . $design_1 . "</li>";
     echo "    <li>样式二(黑)数量：&nbsp;&nbsp;" . $design_2 . "</li>";
     echo "</ul> ";
@@ -111,12 +111,18 @@
     //判断姓名是否为空或者过长
 
     echo "<div class=\"warning\">";
-    if (strlen($name) > 20 || strlen($name) < 1) {
+
+    $name_str=preg_replace("/\s/
+    ","",$name);
+    if(strlen($name_str)<1){
+        die("<script>alert('您输入的姓名全为空格，请修改后重试！');</script>");
+    }
+    if (strlen($name) > 20 ) {
         die("<p>您输入的姓名太长或为空，请修改后重试！</p>");
     }
     //判断姓名是否全为汉字
     if (!preg_match('/^[\x{4e00}-\x{9fa5}]+$/u', $name)) {
-        die("<p>姓名全部必须是汉字!</p>");
+        die("<p>姓名全部必须是汉字!,请修改后重试！</p>");
     }
 
     /*
@@ -135,7 +141,10 @@
     if (strlen($address) < 1 || strlen($address) > 100) {
         die("<p>您输入的地址太长或太短，请修改后重试！</p>");
     }
-
+    $address_str =preg_replace("/\s/","",$address);
+    if(strlen($address_str)<1){
+        die("<p>您输入的地址全为空格，请修改后重试！</p>");
+    }
 
     //判断款式
     if ($style != 1 && $style != 2) {
@@ -151,7 +160,7 @@
         die("<p>数量不能为空</p>");
     }
     //判断样式数量
-    if ($design_1 < 1 && $design_1 < 1) {
+    if ($design_1 < 1 && $design_2 < 1) {
         die("<p>那么漂亮的衣服一件都不买，请修改后重试！</p>");
     }
     //判断样式
@@ -162,7 +171,7 @@
         die("<p>您输入的数量不合法，请修改后重试！</p>");
     }
     if($design_1 > 4 || $design_2 > 4){
-        die("<p>小组衣服是全球限量产品，美人最多买四件！</p>");
+        die("<p>小组衣服是全球限量产品，每人最多买四件！</p>");
     }
 
 
@@ -195,13 +204,13 @@
     $r2 = $result_phone->fetch_array();
 
     if ($r1[0] != '0' or $r2[0] != '0') {
-        echo "<p>您的姓名或电话号码已存在,请联系管理员！</p>";
+        echo "<p>您的姓名或电话号码已存在,请联系小组负责人！</p>";
     } else {
         $query = "insert into " . $DB_TABLE_NAME . "(name,phone,address,style,size,design_1,design_2)  values( \"" . $name . "\"," . $phone . ",\"" . $address . "\"," . $style . "," . $size . "," . $design_1 . "," . $design_2 . ");";
 
         $result = $connect->query($query);
         if (!$result) {
-            echo "<p>插入数据失败，请重试或联系管理员！</p>";
+            echo "<p>插入数据失败，请重试或联系小组负责人！</p>";
         } else {
             echo "<p>提交成功！</p>";
         }
