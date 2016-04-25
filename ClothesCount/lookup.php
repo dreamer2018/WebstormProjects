@@ -40,7 +40,7 @@
     echo '<div class="table">';
     echo "<table border='1' width='1500px' bordercolor=\"#c7254e\">";
     echo "<tr>";
-    echo "<th>ID</th>";
+    echo "<th>订购ID</th>";
     echo "<th>姓名</th>";
     echo "<th>手机号</th>";
     echo "<th>地址</th>";
