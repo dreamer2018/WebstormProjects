@@ -12,3 +12,4 @@ CREATE TABLE clothes(
   design_2 int(1) not null,
   PRIMARY KEY (id)
 );
+SELECT * from clothes;
