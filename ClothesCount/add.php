@@ -122,7 +122,7 @@
     }
     //判断姓名是否全为汉字
     if (!preg_match('/^[\x{4e00}-\x{9fa5}]+$/u', $name)) {
-        die("<p>姓名全部必须是汉字!,请修改后重试！</p>");
+        die("<p>姓名必须全部是汉字!,请修改后重试！</p>");
     }
 
     /*
@@ -205,15 +205,15 @@
     $r2 = $result_phone->fetch_array();
 
     if ($r1[0] != '0' or $r2[0] != '0') {
-        echo "<p>您的姓名或电话号码已存在,请联系小组负责人,或点击<a href='lookup.php'>订购查询</a></p>";
+        die("<p>您的姓名或电话号码已存在,请联系小组负责人,或点击<a href='lookup.php'>已订查询</a></p>");
     } else {
         $query = "insert into " . $DB_TABLE_NAME . "(name,phone,address,style,size,design_1,design_2)  values( \"" . $name . "\"," . $phone . ",\"" . $address . "\"," . $style . "," . $size . "," . $design_1 . "," . $design_2 . ");";
 
         $result = $connect->query($query);
         if (!$result) {
-            echo "<p>插入数据失败，请重试或联系小组负责人！</p>";
+            die("<p>插入数据失败，请重试或联系小组负责人！</p>");
         } else {
-            echo "<p>提交成功,请静待衣服的到来，或点击<a href='lookup.php'>订购查询</a></p>";
+            echo "<p>提交成功,请静待衣服的到来，或点击<a href='lookup.php'>已订查询</a></p>";
         }
     }
     ?>

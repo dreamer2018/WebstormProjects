@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XiyouLinuxGroup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body background="image/backgroud.jpg">
+<div style="margin-top: 2px;">
+    <div class="row-fluid">
+        <div class="span12">
+            <form class="form-horizontal" action="add.php" method="post">
+                <div class="control-group" style="margin-left:45%">
+                    <label class="control-label" for="inputName">姓名：</label>
+                    <div class="controls" style="margin-top: 5px">
+                        <input id="inputName" type="text" name="name"/>
+                    </div>
+                </div>
+                <div class="control-group" style="margin-left: 45%">
+                    <label class="control-label" for="inputNumber" style="margin-top: 10px">手机号：</label>
+                    <div class="controls" style="margin-top: 5px">
+                        <input id="inputPhone" type="text" name="phone"/>
+                    </div>
+                </div>
+                <div class="control-group" style="margin-left: 45%">
+                    <label class="control-label" for="inputAddress" style="margin-top: 10px">联系地址(邮递衣服用)：</label>
+                    <div class="controls" style="margin-top: 5px">
+                        <input id="inputAddress" type="text" name="address"/>
+                    </div>
+                </div>
+                <div class="control-group" style="margin-left: 45%">
+                    <label class="control-label" style="margin-top: 10px">款&nbsp;&nbsp;式：</label>
+                    <select name="style">
+                        <option value="1">男款</option>
+                        <option value="2">女款</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="control-group" style="margin-left: 45%">
+                        <label class="control-label" for="inputAddress" style="margin-top: 10px">尺&nbsp;&nbsp;寸：</label>
+                        <select name="size">
+                            <option value="1">M</option>
+                            <option value="2">L</option>
+                            <option value="3">XL</option>
+                            <option value="4">XXL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group" style="margin-left: 45%" >
+                    <label class="control-label" style="margin-top: 10px">样式一数量：</label>
+                    <select name="design_1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="control-group" style="margin-left: 45%">
+                    <label class="control-label" style="margin-top: 10px">样式二数量：</label>
+                    <select name="design_2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="container-fluid" style="margin-left: 37%">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <img src="image/style_1_f.jpg" class="img-rounded" width="200" height="200"
+                                 style="margin-top: 10px;margin-right: 20px"/>
+                            <img src="image/style_1_b.jpg" class="img-rounded" width="200" height="200"
+                                 style="margin-top: 10px"/><br/>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;margin-left: 187px">
+                        <label>样式一</label>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <img src="image/style_2_f.jpg" class="img-rounded" width="200" height="200"
+                                 style="margin-top: 10px;margin-right: 20px"/>
+                            <img src="image/style_2_b.jpg" class="img-rounded" width="200" height="200"
+                                 style="margin-top: 10px"/><br/>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;margin-left: 187px">
+                        <label>样式二</label>
+                    </div>
+                    <div>
+                        <label>号码参照：</label><br/>
+                        <label>&nbsp;&nbsp;女款：李映霄:L(白),XXL(黑) &nbsp;&nbsp;潘璐:XL&nbsp;&nbsp;何杏：M(男款)</label><br/>
+                        <label>&nbsp;&nbsp;男款：高朴：M &nbsp;&nbsp;刘瑜琀：L&nbsp;&nbsp;李林翰：XL&nbsp;&nbsp;王伟豪：XL&nbsp;&nbsp;</label>
+                    </div>
+                    <div class="inform" style="font-size: 18px;color: #c7254e;">
+                        <label>衣服50元/件，请转至支付宝:15829001320(大鲜橙子)</label>
+                        <br/><label style="margin-left: 10%">转账时记着写好备注呦!</label>
+                    </div>
+                </div>
+                <div style="margin-top: 15px;margin-left: 44%">
+                    <button class="btn btn-success" type="submit">提交</button>
+                    <button class="btn btn-danger" type="reset" style="margin-left: 60px;">重置</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 包括所有已编译的插件 -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
