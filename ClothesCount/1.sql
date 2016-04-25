@@ -1,5 +1,6 @@
 create DATABASE Clothes;
 use Clothes;
+SHOW DATABASES ;
 CREATE TABLE clothes(
   id int AUTO_INCREMENT,
   name varchar(20) not null UNIQUE ,
