@@ -205,7 +205,7 @@
     $r2 = $result_phone->fetch_array();
 
     if ($r1[0]== '0' and $r2[0] == '0') {
-        die("<p>您的信息不存在,不需要重置,请点击<a href='lookup.php'>已订查询</a>查看</p>");
+        die("<p>您的信息不存在,不需要重置,请点击<a href='lookup.php'>已订查询</a>查看,或点击<a href='index.html'><>首页></p>");
     } else {
 
         $query = "update ".$DB_TABLE_NAME." set name=\"".$name."\",phone=".$phone.",address=\"".$address."\",style=".$style.",size=".$size.",design_1=".$design_1.",design_2=".$design_2."  where name=\"".$name."\";";
