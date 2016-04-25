@@ -115,10 +115,10 @@
     $name_str=preg_replace("/\s/
     ","",$name);
     if(strlen($name_str)<1){
-        die("<script>alert('您输入的姓名全为空格，请修改后重试！');</script>");
+        die("<p>您输入的姓名为空，请修改后重试！;</p>");
     }
-    if (strlen($name) > 20 ) {
-        die("<p>您输入的姓名太长或为空，请修改后重试！</p>");
+    if (strlen($name) > 20  ) {
+        die("<p>您输入的姓名太长，请修改后重试！</p>");
     }
     //判断姓名是否全为汉字
     if (!preg_match('/^[\x{4e00}-\x{9fa5}]+$/u', $name)) {
@@ -137,14 +137,15 @@
         die("<p>您输入的手机号不正确，请修改后重试!</p>");
     }
 
+    $address_str =preg_replace("/\s/","",$address);
+    if(strlen($address_str)<1){
+        die("<p>您输入的地址为空，请修改后重试！</p>");
+    }
     //判断地址是否过长或为空
     if (strlen($address) < 1 || strlen($address) > 100) {
         die("<p>您输入的地址太长或太短，请修改后重试！</p>");
     }
-    $address_str =preg_replace("/\s/","",$address);
-    if(strlen($address_str)<1){
-        die("<p>您输入的地址全为空格，请修改后重试！</p>");
-    }
+
 
     //判断款式
     if ($style != 1 && $style != 2) {
@@ -204,7 +205,7 @@
     $r2 = $result_phone->fetch_array();
 
     if ($r1[0] != '0' or $r2[0] != '0') {
-        echo "<p>您的姓名或电话号码已存在,请联系小组负责人！</p>";
+        echo "<p>您的姓名或电话号码已存在,请联系小组负责人,或点击<a href='lookup.php'>订购查询</a></p>";
     } else {
         $query = "insert into " . $DB_TABLE_NAME . "(name,phone,address,style,size,design_1,design_2)  values( \"" . $name . "\"," . $phone . ",\"" . $address . "\"," . $style . "," . $size . "," . $design_1 . "," . $design_2 . ");";
 
@@ -212,7 +213,7 @@
         if (!$result) {
             echo "<p>插入数据失败，请重试或联系小组负责人！</p>";
         } else {
-            echo "<p>提交成功！</p>";
+            echo "<p>提交成功,请静待衣服的到来，或点击<a href='lookup.php'>订购查询</a></p>";
         }
     }
     ?>
