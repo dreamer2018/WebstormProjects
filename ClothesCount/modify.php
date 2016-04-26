@@ -110,10 +110,14 @@
      **/
 
 
-    //判断姓名是否为空或者过长
 
     echo "<div class=\"warning\">";
+    //判断id是否为全部数字，且为11位
+    if (!preg_match("/[1-9]\d*/", $id)){
 
+        die("<p>您输入的订购ID不正确，请修改后重试!</p>");
+    }
+    //判断姓名是否为空或者过长
     $name_str=preg_replace("/\s/
     ","",$name);
     if(strlen($name_str)<1){
