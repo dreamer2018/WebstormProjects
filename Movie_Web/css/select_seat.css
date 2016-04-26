@@ -3,3 +3,10 @@
     margin-left: 20px;
     font-size: 15px;
 }
+.type img{
+    width: 40px;
+    height: 40px;
+}
+.can_select{
+    font-size: 10px;
+}
