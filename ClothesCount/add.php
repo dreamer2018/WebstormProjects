@@ -111,9 +111,8 @@
     //判断姓名是否为空或者过长
 
     echo "<div class=\"warning\">";
-
-    $name_str=preg_replace("/\s/
-    ","",$name);
+    //去除空格
+    $name_str=preg_replace("/\s/","",$name);
     if(strlen($name_str)<1){
         die("<p>您输入的姓名为空，请修改后重试！;</p>");
     }
@@ -136,7 +135,7 @@
 
         die("<p>您输入的手机号不正确，请修改后重试!</p>");
     }
-
+    //去除空格
     $address_str =preg_replace("/\s/","",$address);
     if(strlen($address_str)<1){
         die("<p>您输入的地址为空，请修改后重试！</p>");
@@ -205,13 +204,13 @@
     $r2 = $result_phone->fetch_array();
 
     if ($r1[0] != '0' or $r2[0] != '0') {
-        die("<p>您的姓名或电话号码已存在,请联系小组负责人,或点击<a href='lookup.php'>已订查询</a></p>");
+        die("<p>您的姓名或电话号码已存在,请点击<a href='lookup.php'>已订查询</a>查看！</p>");
     } else {
         $query = "insert into " . $DB_TABLE_NAME . "(name,phone,address,style,size,design_1,design_2)  values( \"" . $name . "\"," . $phone . ",\"" . $address . "\"," . $style . "," . $size . "," . $design_1 . "," . $design_2 . ");";
 
         $result = $connect->query($query);
         if (!$result) {
-            die("<p>插入数据失败，请重试或联系小组负责人！</p>");
+            die("<p>插入数据失败，请重试！</p>");
         } else {
             echo "<p>提交成功,请静待衣服的到来，或点击<a href='lookup.php'>已订查询</a></p>";
         }
