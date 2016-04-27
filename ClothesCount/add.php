@@ -141,7 +141,7 @@
         die("<p>您输入的地址为空，请修改后重试！</p>");
     }
     //判断地址是否过长或为空
-    if (strlen($address) < 1 || strlen($address) > 100) {
+    if (strlen($address) < 1 || strlen($address) > 200) {
         die("<p>您输入的地址太长或太短，请修改后重试！</p>");
     }
 
@@ -190,30 +190,13 @@
         die("Select Databases Error");
     }
 
-    //查找姓名
-    $select_name = "select count(name) from " . $DB_TABLE_NAME . " where name=\"" . $name . "\";";
-    //查找电话号码
-    $select_phone = "select count(phone) from " . $DB_TABLE_NAME . " where phone=" . $phone . ";";
-
-    //获取结果
-    $result_name = $connect->query($select_name);
-    $result_phone = $connect->query($select_phone);
-
-
-    $r1 = $result_name->fetch_array();
-    $r2 = $result_phone->fetch_array();
-
-    if ($r1[0] != '0' or $r2[0] != '0') {
-        die("<p>您的姓名或电话号码已存在,请点击<a href='lookup.php'>已订查询</a>查看！</p>");
-    } else {
         $query = "insert into " . $DB_TABLE_NAME . "(name,phone,address,style,size,design_1,design_2)  values( \"" . $name . "\"," . $phone . ",\"" . $address . "\"," . $style . "," . $size . "," . $design_1 . "," . $design_2 . ");";
 
-        $result = $connect->query($query);
-        if (!$result) {
-            die("<p>插入数据失败，请重试！</p>");
-        } else {
-            echo "<p>提交成功,请静待衣服的到来，或点击<a href='lookup.php'>已订查询</a></p>";
-        }
+   $result = $connect->query($query);
+   if (!$result) {
+        die("<p>插入数据失败，请重试！</p>");
+    } else {
+       echo "<p>提交成功,请静待衣服的到来，或点击<a href='lookup.php'>已订查询</a></p>";
     }
     ?>
     </div>
