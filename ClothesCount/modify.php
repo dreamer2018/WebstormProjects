@@ -148,7 +148,7 @@
         die("<p>您输入的地址为空，请修改后重试！</p>");
     }
     //判断地址是否过长或为空
-    if (strlen($address) < 1 || strlen($address) > 100) {
+    if (strlen($address) < 1 || strlen($address) > 200) {
         die("<p>您输入的地址太长或太短，请修改后重试！</p>");
     }
 
@@ -178,7 +178,7 @@
         die("<p>您输入的数量不合法，请修改后重试！</p>");
     }
     if($design_1 > 4 || $design_2 > 4){
-        die("<p>小组衣服是全球限量产品，每人最多买四件！</p>");
+        die("<p>小组衣服是全球限量产品，每人最多买8件！</p>");
     }
 
 
@@ -197,35 +197,12 @@
         die("Select Databases Error");
     }
 
-    //查找id
-    $select_id = "select count(*) from " . $DB_TABLE_NAME . " where id=" . $id. ";";
-    //查找姓名
-    $select_name = "select count(name),id from " . $DB_TABLE_NAME . " where name=\"" . $name . "\";";
-    //查找电话号码
-    $select_phone = "select count(phone),id from " . $DB_TABLE_NAME . " where phone=" . $phone . ";";
-
-    //获取结果
-    $result_id = $connect->query($select_id);
-    $result_phone = $connect->query($select_phone);
-    $result_name = $connect->query($select_name);
-
-
-    $r1 = $result_name->fetch_array();
-    $r2 = $result_phone->fetch_array();
-    $r_id = $result_id->fetch_array();
-
-    if ($r_id[0] < 1) {
-        die("<p>您的订购ID不存在,请点击<a href='lookup.php'>已订查询</a>确认,或点击<a href='index.html'>首页</a>添加</p>");
-    }elseif (($r1[0] > 0 and $r1[1]!=$id) or ($r2[0] > 0 and $r2[1]!=$id)){
-            die("<p>您的姓名或电话号码被占用,点击<a href='lookup.php'>已订查询</a>查看</p>");
+    $query = "update ".$DB_TABLE_NAME." set name=\"".$name."\",phone=".$phone.",address=\"".$address."\",style=".$style.",size=".$size.",design_1=".$design_1.",design_2=".$design_2."  where id=".$id.";";
+    $result = $connect->query($query);
+    if (!$result) {
+          echo "<p>插入数据失败，请重试！</p>";
     } else {
-        $query = "update ".$DB_TABLE_NAME." set name=\"".$name."\",phone=".$phone.",address=\"".$address."\",style=".$style.",size=".$size.",design_1=".$design_1.",design_2=".$design_2."  where id=".$id.";";
-        $result = $connect->query($query);
-        if (!$result) {
-            echo "<p>插入数据失败，请重试！</p>";
-        } else {
-            echo "<p>信息重置成功，请点击<a href='lookup.php'>已订查询</a>查看</p>";
-        }
+          echo "<p>信息重置成功，请点击<a href='lookup.php'>已订查询</a>查看</p>";
     }
     ?>
 </div>
