@@ -76,10 +76,24 @@
             default:
                 $size_name = "";
         }
+	$number_1=$row["phone"]/100000000;
+	$number_1=intval($number_1);
+	$number_2=$row["phone"]%10000;
+	if(strlen($number_2)==3){
+		$number_2="0".$number_2;
+	}elseif(strlen($number_2)==2){
+		$number_2="00".$number_2;
+	}elseif(strlen($number_2)==1){
+		$number_2="000".$number_2;
+	}elseif(strlen($number_2)==0){
+		$number_2="0000".$number_2;
+	}
+	$number=$number_1."****".$number_2;
+	
         echo "<tr>";
         echo "<td align='center' >" . $row["id"] . "</td>";
         echo "<td align='center' >" . $row["name"] . "</td>";
-        echo "<td align='center' >" . $row["phone"] . "</td>";
+        echo "<td align='center' >" . $number. "</td>";
         echo "<td align='center' >" . $row["address"] . "</td>";
         echo "<td align='center' >" . $style_name . "</td>";
         echo "<td align='center' >" . $size_name . "</td>";
