@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>选座</title>
 	<link href="css/select_seat.css" rel="stylesheet" type="text/css">
+	<script language="JavaScript" src="js/index.js"></script>
 </head>
 <body>
 <div class="top">
@@ -26,10 +27,10 @@
 				<table>
 					<tr>
 						<td></td>
-						<td><img src="image/1.jpg"></td>
-						<td><img src="image/1.jpg"></td>
-						<td><img src="image/1.jpg"></td>
-						<td><img src="image/1.jpg"></td>
+						<td><img src="image/1.jpg" onclick="return change()"  class="img1" ></td>
+						<td><img src="image/1.jpg" onclick="return change()"  class="img1" ></td>
+						<td><img src="image/1.jpg" onclick="return change()"  class="img1" ></td>
+						<td><img src="image/1.jpg" onclick="return change()"  class="img1" ></td>
 						<td><img src="image/1.jpg"></td>
 						<td><img src="image/1.jpg"></td>
 						<td><img src="image/1.jpg"></td>
@@ -159,7 +160,7 @@
 				<p>优惠：学生半价</p>
 				<p>总计：￥0元</p>
 				<p>输入取票手机号：<input class="input" type="text"></p>
-				<a href="#"><button type="button" onclick="click()">完成选座</button></a>
+				<input type="button" onClick="on_click()" value="完成选座" id="button">
 			</div>
 		</div>
 	</div>
