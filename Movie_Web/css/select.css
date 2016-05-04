@@ -34,8 +34,11 @@
 }
 .table{
     width: 80%;
-    margin: 0 auto;
+   /* margin: 0 auto;*/
+    margin-left: 10%;
+    margin-bottom: 2%;
     height: 30px;
+
 }
 .time{
     margin-left: 5%;
