@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
+<html>
+<body id="myid" class="mystyle">
+
+<script type="text/javascript">
+	x=document.getElementsByTagName('body')[0];
+	document.write("Body CSS class: " + x.className);
+	document.write("<br />");
+	document.write("An alternate way: ");
+	document.write(document.getElementsByName('mystyle').className);
+</script>
 
 </body>
 </html>

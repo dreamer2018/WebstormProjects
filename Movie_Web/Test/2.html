@@ -2,12 +2,14 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
-		function change() {
-			document.getElementsByClassName("img1").src = "../image/2.jpg";
+		function changeImage(){
+			//document.getElementById("imgflag").src="../image/2.jpg";
+			document.src="../image/2.jpg";
 		}
 	</script>
 </head>
 <body>
-<img class="img1" src="../image/1.jpg" alt="" onclick="return change()" />
+<img id="imgflag" src="../image/1.jpg" onclick="changeImage()">
 </body>
 </html>
+

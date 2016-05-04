@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Title</title>
+<script>
+	function change_pic(){
+		var imgObj = document.getElementById("caocao_pic");
+		if(imgObj.getAttribute("src",2)=="../image/1.jpg"){
+			imgObj.src="../image/2.jpg";
+		}else{
+			imgObj.src="../image/1.jpg";
+		}
+	}
+	function change(){
+		/*
+		var imgObj = document.getElementsByClassName("wujiang_pic_size");
+		alert("点击");
+		if(imgObj.getAttribute("src",2)=="../image/1.jpg"){
+			imgObj.src="../image/2.jpg";
+		}else{
+			imgObj.src="../image/1.jpg";
+		}*/
+		//document.write(document.getElementsByClassName('wujiang_pic_size').className);
+		var imgObj = document.getElementsByClassName("wujiang_pic_size");
+		imgObj.src="../image/2.jpg";
+	}
+
+</script>
 </head>
 <body>
-
+	<img src="../image/1.jpg" class="wujiang_pic_size" id="caocao_pic" onClick="change()">
 </body>
 </html>
