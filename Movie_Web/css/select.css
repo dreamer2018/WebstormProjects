@@ -1,0 +1,49 @@
+.left img {
+    height: 40px;
+    width: 50px;
+}
+
+.left {
+    float: left;
+    margin-left: 10%;
+}
+
+.right {
+    float: none;
+}
+.m1{
+    margin-left: 13%;
+}
+.m2, .m3, .m4 {
+    margin-left: 5%;
+}
+
+.th {
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+    background-color: rgba(14, 88, 145, 0.45);
+}
+
+.t1{
+    margin-left: 5%;
+    line-height: 30px;
+}
+.t2,.t3,.t4,.t5,.t6{
+    margin-left: 10%;
+}
+.table{
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+}
+.time{
+    margin-left: 5%;
+    float: left;
+    margin-top: 1%;
+}
+.language, .room, .price, .preferential, .select {
+    margin-left: 10%;
+    float: left;
+    margin-top: 1%;
+}
