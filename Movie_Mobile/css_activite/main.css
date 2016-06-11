@@ -1,0 +1,180 @@
+﻿* {
+	margin:0;
+	padding:0;
+	
+}
+
+body
+{	background-color: #F5F5F5;
+	<!--background:url(../images_activity/bg.jpg)repeat ;-->
+}
+.top
+{
+	width:100%;
+	height:27px;
+	background:url(../images_activite/top_bg.jpg)repeat-x;
+}
+.top_content
+{
+	width:1000px;
+	margin:0 auto;
+}
+.top_content li
+{
+	list-style-image:url(../images_activite/li_bg.gif);
+	float:right;
+	width:70px;
+	line-height:27px;
+}
+.top_content a:link,.top_content a:visited
+{
+	color:#8E8E8E;
+	text-decoration:none;
+}
+.top_content a:hover,.top_content a:active
+{
+	color:#900;
+	text-decoration:none;
+}
+.wrap
+{
+	margin:0 auto;
+	width:1000px;	
+}
+.logo
+{
+	height:60px;
+	background-color:#696969;
+	
+}
+.logo_left
+{
+	width:100px;
+	float:left;
+	
+}
+.logo_right
+{
+	width:900px;
+	float:left;
+	height:60px;
+	background-color:#696969;
+}
+.logo_nav_l
+{
+	width:600px;
+	height:60px;
+	float:left;
+	background:#696969;
+}
+.logo_nav_r
+{
+	width:300px;
+	float:right;
+	height:60px;
+}
+.logo_nav_l li
+{
+	float:left;
+	list-style-type:none;
+	width:100px;
+	text-align:center;
+	line-height:60px;
+}
+.logo_nav_l a:link,.logo_nav_l a:visited
+{
+	text-decoration:none;
+	color:#FFF;
+	font-size:16px;
+	font-family:"微软雅黑";
+}
+.logo_nav_l a:hover,.logo_nav_l a:active
+{
+	text-decoration:none;
+	color: #FF0;
+	font-size:16px;
+	font-family:"微软雅黑";
+}
+.search_text
+{
+	width:200px;
+	height:30px;
+	margin-top:15px;
+	background:url(../images_activite/search.jpg)no-repeat  #FFF right center;
+	padding-right:30px;
+	border:1px solid #FFF;
+}
+.ad
+{
+	height:310px;
+	overflow:hidden;	
+}
+.ui
+{
+	margin-top:30px;
+	
+}
+.ui li
+{
+	height:300px;
+	width: 1000px;
+	list-style-type:none;
+}
+.ui_pic1,.ui_text1
+{
+	float:left;
+		
+}
+.ui_text1 ,.ui_text2,.ui_text3,.ui_text4
+{
+	padding:30px 200px;
+	
+}
+.ui_pic2,.ui_text2
+{
+	float:left;
+}
+.ui_pic3,.ui_text3
+{
+	float:left;
+}
+.ui_pic4,.ui_text4
+{
+	float:left;
+}
+p
+{
+	font-size:25px;
+	font-family:"微软雅黑";
+	text-align:left;
+	line-height:40px;
+}
+.copyright
+{
+	width:100%;
+	height:200px;
+	background-color:#E8E8E8;
+}
+.copyright_content
+{
+	width:1000px;
+	margin:0 auto;
+	padding-top:20px;
+}
+.copyright_content  ul li
+{
+	list-style-type:none;
+	float:left;
+	width:160px;
+	background:url(../images_activite/line.png)no-repeat right center;
+	text-align:center;
+	line-height:150px;
+	font-family:"微软雅黑";
+}
+.copyright_content a
+{
+	text-decoration:none;
+	color:#999;
+	font-size:18px;
+}
+

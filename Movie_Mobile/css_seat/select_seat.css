@@ -1,0 +1,62 @@
+.top{
+    overflow: hidden;
+}
+.title{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.type img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.type{
+    font-size: 12px;
+}
+.type span{
+    margin-left: 10px;
+}
+
+.seat img{
+    width: 30px;
+    height: 30px;
+}
+.seat{
+    width: 400px;
+    margin: 0px auto;
+}
+.seat table{
+    margin-top: 40px;
+}
+.left{
+    width: 60%;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+}
+.right img{
+    width: 160px;
+    height: 105px;
+
+}
+.right{
+    font-size: 12px;
+    float: left;
+}
+.info{
+
+}
+.image{
+    float: left;
+    vertical-align: middle;
+}
+.instruct{
+    margin-left: 13px;
+    float: left;
+    font-size: 11px;
+
+}
+.address{
+    float: none;
+}
