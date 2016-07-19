@@ -11,12 +11,15 @@
  * Date: 7/18/16
  * Time: 7:07 PM
  */
+
 /*
  * 连接数据库
  */
+
 require_once "DB_login.php";
 
 $connect = new mysqli($DB_HOST, $DB_USER, $DB_PASSWD);
+
 if (!$connect) {
     die("Connect DataBase Error");
 }
@@ -35,7 +38,6 @@ $time = date("Ymd");
 $query = "select id,user_id,type1,type2,balance,time from book where time like \"" . $time . "%\" order by id desc;";
 $result = $connect->query($query);
 
-
 echo "<table border='1' >";
 echo "<tr><th>ID</th><th>用户名</th><th>两荤一素</th><th>一荤两素</th><th>余额</th><th>时间</th></tr>";
 
@@ -43,14 +45,17 @@ $type1 = 0; //第一类的数量
 $type2 = 0; //第二类的数量
 
 while ($row = $result->fetch_array()) {
+
     $query2 = 'select name from info where id=' . $row['user_id'] . ';';
     $result2 = $connect->query($query2);
+    
     $name = "";
     while ($row2 = $result2->fetch_array()) {
         $name = $row2['name'];
     }
     $type1 += $row['type1'];
     $type2 += $row['type2'];
+    
     echo "<tr align='center'>";
     echo "<td>" . $row['id'] . "</td>";
     echo "<td>" . $name . "</td>";

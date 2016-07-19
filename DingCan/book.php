@@ -17,8 +17,9 @@ require_once 'DB_login.php';
  * 获取前端数据
  */
 
+
 $id = $_POST['id'];
-$type1 = $_POST['type1'];
+$type1 = $_POST['type1']; 
 $type2 = $_POST['type2'];
 
 /*
@@ -52,6 +53,7 @@ while ($row = $result->fetch_array()) {
 /*
  * 计算总价钱
  */
+
 $price=0;
 $price = $type1 * 8 + $type2 * 7;
 
@@ -137,7 +139,7 @@ echo "<tr>";
 echo "<th>ID</th>";
 echo "<th>用户名</th>";
 echo "<th>两荤一素</th>";
-echo "<th>一荤两素</th>";
+echo "<th>两素一荤</th>";
 echo "<th>余额</th>";
 echo "<th>时间</th>";
 echo "</tr>";
@@ -163,11 +165,14 @@ while ($row = $result->fetch_array()) {
 echo "</table>";
 echo "<h2>统计：</h2>";
 echo "<p>两荤一素：" . $type1 . "份</p>";
-echo "<p>一荤两素：" . $type2 . "份</p>";
+echo "<p>两素一荤：" . $type2 . "份</p>";
 
 $count = $type1 + $type2;
+
 echo "<p>共：" . $count . "份</p>";
+
 $money = $type1 * 8 + $type2 * 7;
+
 echo "<p>小计：" . $money . "元</p>";
 
 /*
@@ -188,6 +193,7 @@ echo "</tr>";
 
 $count=0;       //充值次数
 $all_money=0;   //总计钱数
+
 while ($row = $result->fetch_array()) {
 
     echo "<tr align='center'>";

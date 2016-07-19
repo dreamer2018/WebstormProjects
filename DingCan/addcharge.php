@@ -20,6 +20,9 @@ require_once 'DB_login.php';
 $id = $_POST['id'];
 $money = $_POST['money'];
 
+if(is_null($money)){
+    $money=0;
+}
 
 /*
  * 连接数据库
@@ -58,6 +61,7 @@ $balance2 = $balance + $money;  //现在余额
 /*
  * 输出订单详情
  */
+
 echo "<h2>充值详情：</h2>";
 echo "<table>
         <tr>
