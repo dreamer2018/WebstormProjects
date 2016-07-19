@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- CSS -->
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/supersized.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,7 +19,7 @@
 <div class="page-container">
     <p style="font-size: 25px;margin-top: 8%;color: #ebe212 ;;">西邮Linux兴趣小组暑假订餐系统</p>
     <div style="margin-top: 10%">
-        <form action="book.php" method="POST" id="form1">
+        <form action="temp.php" method="POST" id="form1">
             <label style="margin-left:8%">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
             <select name="id">
                 <?php
@@ -70,10 +69,11 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
-            <button type="submit" style="margin-top: 30%">提交</button>
+        <button type="submit" style="margin-top: 30%">提交</button>
         </form>
     </div>
 </div>
 </body>
 </html>
+
 
