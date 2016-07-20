@@ -43,8 +43,8 @@ while ($row = $result->fetch_array()) {
 <h1>订单确认：</h1>
 <div style="margin-left:5%">
 	<h2>姓名：<?php echo $name ?></h2>
-    <h3>两荤一素：<?php echo $type1 ?>份</h3>
-    <h3>两素一荤：<?php echo $type2 ?>份</h3>
+    <h3>两荤一素：<?php echo $type1  ?>份</h3>
+    <h3>两素一荤：<?php echo $type2  ?>份</h3>
 
     <form action="book.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $id ?>">
