@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+    <!-- 注意：蓝鲸APP中使用，请将'http://o.qcloud.com/static_api/' 替换为${REMOTE_STATIC_URL} -->
+    <!-- Bootstrap css -->
+    <link href="http://o.qcloud.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="http://o.qcloud.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css"
+          rel="stylesheet">
+    <link href="http://o.qcloud.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css"
+          rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="http://o.qcloud.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="http://o.qcloud.com/static_api/v3/bk/css/bk.css?v=1.0.1" rel="stylesheet">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script src="http://o.qcloud.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="http://o.qcloud.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="http://o.qcloud.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="http://o.qcloud.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]>
+    <script src="http://o.qcloud.com/static_api/v3/assets/js/html5shiv.min.js"></script>
+    <script src="http://o.qcloud.com/static_api/v3/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- 数据埋点统计 -->
+    <script src="http://o.qcloud.com/static_api/v3/analysis.js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="king-block king-block-bordered">
+            <div class="king-block-header king-gray-light">
+                <ul class="king-block-options">
+                    <li>
+                        <button type="button"><i class="fa fa-cog"></i></button>
+                    </li>
+                </ul>
+                <h3 class="king-block-title">填写注册信息</h3>
+            </div>
+            <div class="king-block-content">
+                <!-- 水平布局表单-1 Start -->
+                <form class="form-horizontal" method="POST" action="index.html">
+                    <div class="form-group">
+                        <label for="inputCount3" class="col-sm-3 control-label">帐号：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputCount3" placeholder="用户名/QQ号码/手机号码">
+                        </div>
+                        <span class="text-danger mt5 fl">*</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">邮箱：</label>
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="输入邮箱帐号">
+
+                        </div>
+                        <span class="text-danger mt5 fl">*</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">密码：</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="6位以上，仅可由数字、字母、下划线组成">
+                        </div>
+                        <span class="text-danger mt5 fl">*</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">确认密码：</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="6位以上，仅可由数字、字母、下划线组成">
+                        </div>
+                        <span class="text-danger mt5 fl">*</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">地区：</label>
+                        <div class="col-sm-7">
+                            <select name="" id="" class="form-control">
+                                <option value="深圳">深圳</option>
+                                <option value="北京">北京</option>
+                                <option value="上海">上海</option>
+                                <option value="广州">广州</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">兴趣爱好：</label>
+                        <div class="col-sm-7">
+                            <div class="checkbox">
+                                <label class="mr10">
+                                    <input type="checkbox" value="">运动
+                                </label>
+                                <label class="mr10">
+                                    <input type="checkbox" value="">音乐
+                                </label>
+                                <label>
+                                    <input type="checkbox" value="">上网（禁用）
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">性别：</label>
+                        <div class="col-sm-7">
+                            <div class="radio">
+                                <label class="mr10">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="" checked="">男
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">女
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label col-sm-3" for="introduction">个人说明：</label>
+                        <div class="col-sm-7">
+                            <textarea class="form-control" rows="3" id="introduction"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">上传头像：</label>
+                        <div class="col-sm-7">
+                            <button class="king-btn king-default king-file-btn king-btn-small mt5">
+                                选择文件
+                                <input type="file">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-7 col-sm-offset-3">
+                            <input type="submit" class="king-btn king-success mr10" value="提交">
+                            <input type="reset" class="king-btn king-default" value="取消">
+                        </div>
+                    </div>
+                </form>
+                <!-- 水平布局表单-1 End -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
