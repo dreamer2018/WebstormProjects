@@ -139,22 +139,19 @@ div.top div.r div.toplink a {
 }
 
 div.top div.r div.toplink {
-    margin: 17px 0 5px 0;
+    margin: 37px 0 5px 0;
     text-align: right;
 }
 
-div.topsearch input {
-    float: left;
-}
 
-div.topsearch input.tetPut {
+input.tetPut {
     border: 1px solid #ccc;
     padding: 1px;
     height: 24px;
     width: 245px;
 }
 
-div.topsearch input.tetBut {
+input.tetBut {
     border: 0;
     background: url("../images/search.jpg") no-repeat 0 0;
     height: 28px;

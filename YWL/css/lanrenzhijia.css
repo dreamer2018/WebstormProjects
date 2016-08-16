@@ -87,6 +87,6 @@ a { blr: expression(this.onFocus=this.blur()); outline: none; }
 
 /*上一个  下一个*/
 .www51buycom .prev,
-.www51buycom .next { display: none; width: 20px; height: 50px; background: url(../images/btn.png) no-repeat; position: absolute; top: 66px;}
+.www51buycom .next { display: none; width: 20px; height: 50px; position: absolute; top: 66px;}
 .www51buycom .prev { left: 0; }
 .www51buycom .next { right: 0; background-position: right }
