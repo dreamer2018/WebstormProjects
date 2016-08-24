@@ -42,8 +42,8 @@
             <br/>
             <label style="">两荤一素：</label>
             <select name="type1" style="margin-top: 10%">
-                <option value="0">0</option>
-                <option value="1">1</option>
+		<option value="0">0</option>
+		<option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -58,7 +58,7 @@
             <label style="">一荤两素：</label>
             <select name="type2" style="margin-top: 10%">
                 <option value="0">0</option>
-                <option value="1">1</option>
+		<option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>

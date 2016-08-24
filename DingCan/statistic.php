@@ -73,7 +73,7 @@ echo "<p>一荤两素：" . $type2 . "份</p>";
 
 $count = $type1 + $type2;
 echo "<p>共：" . $count . "份</p>";
-$money = $type1 * 8 + $type2 * 7;
+$money = $type1 * 9 + $type2 * 8;
 echo "<p>小计：" . $money . "元</p>";
 ?>
 </body>

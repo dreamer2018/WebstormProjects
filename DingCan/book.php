@@ -55,7 +55,7 @@ while ($row = $result->fetch_array()) {
  */
 
 $price=0;
-$price = $type1 * 8 + $type2 * 7;
+$price = $type1 * 9 + $type2 * 8;
 
 /*
  * 计算订餐后余额
@@ -122,7 +122,7 @@ if ($type2 > 0 || $type1 > 0) {
  */
 if($balance2 < 0){
     echo "<h1 style='color: #b90780'>您已欠费，请及时充值！</h1>";
-}elseif ($balance2 < 7){
+}elseif ($balance2 < 8){
     echo "<h2 style='color: #b90c17'>您余额即将用完，请及时充值！</h2>";
 }
 
@@ -146,6 +146,10 @@ echo "</tr>";
 
 $type1 = 0; //第一类的数量
 $type2 = 0; //第二类的数量
+$t1_m = 0;  //第一类钱数
+$t2_m = 0; //第二类钱数
+
+
 
 while ($row = $result->fetch_array()) {
 
@@ -161,6 +165,20 @@ while ($row = $result->fetch_array()) {
     echo "<td>" . substr($row['time'], 0, 4) . "年" . substr($row['time'], 4, 2) . "月" . substr($row['time'], 6, 2) . "日" . substr($row['time'], 8, 2) . ":" . substr($row['time'], 10, 2) . ":" . substr($row['time'], 12, 2) . "</td>";
     echo "</tr>";
 
+    $t1=0;
+    $t2=0;
+    if($row['id'] <= 263 )
+    {
+    	$t1=$row['type1']*8;
+    	$t2=$row['type2']*7;
+    }
+    else
+    {
+    	$t1=$row['type1']*9;
+    	$t2=$row['type2']*8;
+    }
+    $t1_m += $t1;
+    $t2_m += $t2;
 }
 echo "</table>";
 echo "<h2>统计：</h2>";
@@ -171,7 +189,7 @@ $count = $type1 + $type2;
 
 echo "<p>共：" . $count . "份</p>";
 
-$money = $type1 * 8 + $type2 * 7;
+$money = $t1_m + $t2_m;
 
 echo "<p>小计：" . $money . "元</p>";
 
