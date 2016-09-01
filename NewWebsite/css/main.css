@@ -1,0 +1,12 @@
+.logo{
+    background-color: antiquewhite;
+}
+
+.name{
+    float: left;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    float: left;
+}
