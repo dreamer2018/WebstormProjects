@@ -5,60 +5,60 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="images/xiyoulinux.png">
     <title>活动编辑页面</title>
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script>
+        $('#editor').wysiwyg();
+
+    </script>
 </head>
 <body>
 <div class="container">
-    <div class="row-md-4">
-        <div class="row-md-2">
-            <div class="span2 navbar-left">
-                <h3>活动编辑</h3>
-            </div>
-            <div class="row-md-2">
-                <button class="btn" type="button">创建新活动</button>
-            </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <h1>活动编辑</h1>
+            <button class="btn" type="button">创建新活动</button>
         </div>
     </div>
-    <div class="row-">
-        <div class="span12">
-            <div class="row-fluid">
-                <div class="span2">
-                    <input type="date">
-                </div>
-                <div class="span2">
-                    <input type="time">
-                </div>
-                <div class="span2">
-                    <input type="text">
-                </div>
-                <div class="span2">
-                    <input type="text">
-                </div>
-                <div class="span2">
-                    <input type="text">
+    <div style="margin-top: 20px;">
+        <form class="form-inline" role="form">
+            <div class="input-group">
+                <div class="input-group-addon">标题：</div>
+                <input type="text" class="form-control">
+            </div>
+            <br/>
+            <br/>
+            <div class="input-group">
+                <div class="input-group-addon">日期：</div>
+                <input class="form-control" type="date" placeholder="date">
+            </div>
+            <div class="input-group">
+                <div class="input-group-addon">时间：</div>
+                <input class="form-control" type="time" placeholder="time">
+            </div>
+            <br/>
+            <br/>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">地点：</div>
+                    <input class="form-control" type="text" placeholder="地点">
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span4">
-                </div>
-                <div class="span4">
-                </div>
-                <div class="span4">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">标签：</div>
+                    <input class="form-control" type="email" placeholder="多个标签逗号隔开">
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12">
-                </div>
+            <br/>
+            <br/>
+            <div class="form-group">
+                <label for="exampleInputFile">海表图片：</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 </body>
