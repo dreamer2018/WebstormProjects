@@ -306,6 +306,8 @@
                 </div>
             </div>
 
+            <iframe src="http://webchat.freenode.net?channels=%23xiyoulinux&uio=d4" width="647" height="400"></iframe>
+
             <div class="post">
                 <div class="post-title">
                     <a href="https://tuna.moe/blog/2015/vbird/">
@@ -353,16 +355,13 @@
                 }
                 return r;
             }
-
             var _today = new Date();
             return Date.parse(
                     _today.getFullYear().toString() + "-"
                     + pad(_today.getMonth() + 1) + "-"
                     + pad(_today.getDate())
             );
-
         }();
-
         $('#recent-events .event').each(function () {
             // console.log($(this).attr("data-event-date"));
             var event_date = Date.parse($(this).attr("data-event-date")),
@@ -432,11 +431,9 @@
         var $container = $('.portfolio'),
                 $items = $container.find('.portfolio-item'),
                 portfolioLayout = 'fitRows';
-
         if ($container.hasClass('portfolio-centered')) {
             portfolioLayout = 'masonry';
         }
-
         $container.isotope({
             filter: '*',
             animationEngine: 'best-available',
@@ -448,12 +445,10 @@
             },
             masonry: {}
         }, refreshWaypoints());
-
         function refreshWaypoints() {
             setTimeout(function () {
             }, 1000);
         }
-
         $('nav.portfolio-filter ul a').on('click', function () {
             var selector = $(this).attr('data-filter');
             $container.isotope({filter: selector}, refreshWaypoints());
@@ -461,11 +456,9 @@
             $(this).addClass('active');
             return false;
         });
-
         function getColumnNumber() {
             var winWidth = $(window).width(),
                     columnNumber = 1;
-
             if (winWidth > 1200) {
                 columnNumber = 5;
             } else if (winWidth > 950) {
@@ -479,28 +472,23 @@
             }
             return columnNumber;
         }
-
         function setColumns() {
             var winWidth = $(window).width(),
                     columnNumber = getColumnNumber(),
                     itemWidth = Math.floor(winWidth / columnNumber);
-
             $container.find('.portfolio-item').each(function () {
                 $(this).css({
                     width: itemWidth + 'px'
                 });
             });
         }
-
         function setPortfolio() {
             setColumns();
             $container.isotope('reLayout');
         }
-
         $container.imagesLoaded(function () {
             setPortfolio();
         });
-
         $(window).on('resize', function () {
             setPortfolio();
         });
