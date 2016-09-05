@@ -1,0 +1,120 @@
+.head-navigation{
+    background-color: #ffffff;
+}
+
+.active-header{
+    margin-top: 100px;
+    margin-left: 80px;
+    color: #357ebd;
+    font-style: italic;
+}
+
+.active-plan{
+    margin-top: 15px;
+    margin-left: 80px;
+    font-style: oblique;
+    color: #9d9d9d;
+}
+
+.active-article{
+    margin-left: 80px;
+    margin-top: 15px;
+}
+.avtive-last{
+    margin-top: 100px;
+    background-color: darkslategray;
+    height: 200px;
+    color:darkgrpey;
+    padding-top: 50px;
+    padding-left: 80px;
+}
+.frsit-head{
+    margin-top: 20px;
+}
+.frist-xian{
+    margin-left: 80px;
+}
+.first-qun{
+    margin-top: 80px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+.first-es{
+    margin-top:80px;
+    margin-left: 90px;
+}
+.first-gg{
+    margin-top:80px;
+
+}
+.first-last{
+    margin-top: 900px;
+    background-color:darkslategray ;
+    height: 200px;
+    color: cornsilk;
+    padding-top: 50px;
+    padding-left: 40px;
+    font-family: "Bookman Old Style";
+    font-size: 50px;
+}
+.we-topic{
+    margin-top: 60px;
+    margin-left: 150px;
+    color: olive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+.we-cir{
+    margin-top: 10px;
+    margin-left: 150px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+.we-img {
+    margin-top: -20px;
+    margin-left: 70px;
+}
+.we-img1{
+    margin-top: 100px;
+    margin-left: -790px;
+}
+.we-topic1{
+    margin-top: -130px;
+    margin-left: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color:  olive;
+}
+.we-cir1{
+    margin-top: 10px;
+    margin-left: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+.we-topic2{
+    margin-top: 180px;
+    margin-left: 160px;
+    color: olive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+.we-cir2{
+    margin-top: 10px;
+    margin-left: 160px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+.we-img2{
+    margin-top: -20px;
+    margin-left: 70px;
+}
+.we-last{
+    margin-top: 300px;
+    background-color:darkslategray ;
+    height: 200px;
+    color: cornsilk;
+    padding-top: 50px;
+    padding-left: 40px;
+    font-family: 幼圆;
+    font-size: 50px;
+}
