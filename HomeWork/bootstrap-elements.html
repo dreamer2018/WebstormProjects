@@ -15,7 +15,7 @@
     <link href="css/sb-admin.css" rel="stylesheet">
     <link href="css/sb-bk-theme.css" rel="stylesheet">
     <!--蓝鲸平台APP 公用的样式文件 -->
-    
+
  	<link href="http://o.qcloud.com/static_api/v3/bk/css/bk.css?v=1.0.1" rel="stylesheet">
     <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
     <!--[if lt IE 9]>
@@ -150,111 +150,252 @@
                         <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> 表格</a>
+                        <a href="tables.html"><i class="fa fa-fw fa-table"></i>所有任务</a>
                     </li>
                     <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> 表单</a>
+                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i>发布任务</a>
                     </li>
                     <li class="active">
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> 排版</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap 布局</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> 下拉菜单 <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="javascript:;">子菜单1 </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">子菜单2</a>
-                            </li>
-                        </ul>
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>任务管理</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </nav>
 
         <div id="page-wrapper">
-
             <div class="container-fluid">
-
                 <!-- Page Heading -->
                 <div class="row page-header-box">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            我们的品牌
+                            用户管理
                         </h1>
                     </div>
                 </div>
-                <!-- /.row -->
 
-                <!-- Main jumbotron for a primary marketing message or call to action -->
-                <div class="jumbotron" style="background:#3C8FD5;color:white;padding:30px 40px;">
-                    <h2>
-                    <img class="icon" width='50' src="img/blueking-1.png"> 
-                     蓝鲸 BLUEKING</h2>
-                    <p style="max-width:1024px;">蓝鲸（BlueKing）是专门为运营人员提供一站式运营技术解决方案的平台，它依托SOA理念和云技术构建的运维模式，以“原子服务集成”和“工具开放构建”的方式致力于解决“运维基础服务”的无人值守 及 “运维增值服务”。</p>
-                    <p><a href="javascript:;" class="king-btn king-success king-btn-large" role="button">查看详情 &raquo;</a>
-                    </p>
-                </div>
-                <div class="page-header">
-                    <h1><small>我们的优势</small></h1>
-                </div>
-				<div class="row">
-				  <div class="col-sm-6 col-md-3">
-				    <div class="thumbnail">
-				      <img src="img/1.jpg">
-				      <div class="caption">
-				        <h3 class="text-center">蓝鲸作业平台</h3>
-				        <p class="text-center">是一个以开放的思路实现的”开放式“操作平台，运维人员在作业平台界面中可以定制几乎所有运维操作。</p>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="col-sm-6 col-md-3">
-				    <div class="thumbnail">
-				      <img src="img/2.jpg">
-				      <div class="caption">
-				        <h3 class="text-center">蓝鲸配置平台</h3>
-				        <p class="text-center">专门为运维人员打造的配置管理数据库平台，由面向用户的WEB系统和面向应用程序的接口系统组成。</p>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="col-sm-6 col-md-3">
-				    <div class="thumbnail">
-				      <img src="img/3.jpg">
-				      <div class="caption">
-				        <h3 class="text-center">蓝鲸移动平台</h3>
-				        <p class="text-center">一个通过微信操作直接一键式执行各种场景的移动端运维利器。释放你的时间，解放你的人力。</p>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="col-sm-6 col-md-3">
-				    <div class="thumbnail">
-				      <img src="img/4.jpg">
-				      <div class="caption">
-				        <h3 class="text-center">蓝鲸数据平台</h3>
-				        <p class="text-center">一个活跃在运维领域的实时计算平台，以海量数据快速采集、实时分析计算、大容量存储及API接口等优势。</p>
-				      </div>
-				    </div>
-				  </div>
-				</div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        用户列表
+                    </div>
+                    <div>
+                        <div class="king-wrapper">
+                            <form class="form-inline king-search-form king-no-bg mt15 mb15 pull-left">
+                                <div class="form-group">
+                                    <label>用户账号：</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入用户账号">
+                                        <span class="input-group-addon"><i
+                                                class="glyphicon glyphicon-time fa fa-calendar-o"></i></span>
+                                    </div>
+                                </div>
 
-                <div class="page-header">
-                    <h1><small>关于我们</small></h1>
-                </div>
-                <div class="well">
-                	<p>蓝鲸是开放的运维PaaS&SaaS云平台，基于IaaS之上构建的运维解决方案。目前先期与腾讯云建立了合作关系，为腾讯云用户提供了专版，后续会逐步依照用户需求支持其他公有云。</p>
-                    <p>截止到2015年5月13日，腾讯云版蓝鲸一共为大家提供了4个通用APP供大家使用，它们分别是配置中心、批量运维、移动运维、成本核算。腾讯游戏内部的更多优秀APP目前正在移植到腾讯云版蓝鲸，后续也会逐渐对外开放，敬请期待~</p>
-                </div>
+                                <div class="form-group">
+                                    <label>用户名：</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入用户账号">
+                                        <span class="input-group-addon"><i
+                                                class="glyphicon glyphicon-time fa fa-calendar-o"></i></span>
+                                    </div>
+                                </div>
 
+                                <div class="form-group">
+                                    <label>状态：</label>
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="1">待审核</option>
+                                            <option value="2">全部</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="king-btn king-info">搜索</button>
+                            </form>
+                            <a type="button" id="transferID" class="king-btn king-success pull-right mt15 ml15">
+                                <i class="fa fa-gavel mr5"></i>审核
+                            </a>
+                            <a href="user_add.html" class="king-btn king-info pull-right mt15 ml15">
+                                <i class="fa fa-user-plus mr5"></i>新增用户
+                            </a>
+                        </div>
+
+                        <table class="table table-out-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th style="width: 10px">
+                                    <input type="checkbox" class="del-all-cb">
+                                </th>
+                                <th style="width:50px;">序号</th>
+                                <th>用户账号</th>
+                                <th>角色</th>
+                                <th>用户名</th>
+                                <th>性别</th>
+                                <th>邮箱</th>
+                                <th>手机号</th>
+                                <th>地区</th>
+                                <th>注册时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-warning fb">待审核</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-success fb">审核通过</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-warning fb">待审核</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-success fb">审核通过</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-success fb">审核通过</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-success fb">审核通过</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="del-cb">
+                                </td>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>系统管理员</td>
+                                <td>admin</td>
+                                <td>男</td>
+                                <td>123344@gamil.com</td>
+                                <td>13502569874</td>
+                                <td>广东省-广州市</td>
+                                <td>2015-06-07 21:45</td>
+                                <td><span class="text-warning fb">待审核</span></td>
+                                <td>
+                                    <a href="#" class="mr15">编辑</a>
+                                    <a href="#">已审核</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="12">
+                                    <div class="pagination-info pull-left">共4条记录，当前第1/1页，每页20条记录</div>
+                                    <div class="pull-right king-page-box">
+
+                                        <ul class="pagination pagination-small pull-right">
+                                            <li page-index="1" class="disabled"><a>«</a></li>
+                                            <li page-index="1" class="active"><a>1</a></li>
+                                            <li page-index="1"><a href="javascript:;">2</a></li>
+                                            <li page-index="1"><a href="javascript:;">3</a></li>
+                                            <li page-index="1"><a href="javascript:;">4</a></li>
+                                            <li page-index="1"><a href="javascript:;">»</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
             </div>
-            <!-- /.container-fluid -->
-
         </div>
-        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
